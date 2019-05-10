@@ -88,25 +88,35 @@
 							</article>
 
 						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-									<div class="contact-form">
-										<form id="contact-form" method="post" action="contact_form_handler.php">
-										<input type="text" name="name" class="form-control" placeholder="Your Name" required>
-										<br>
-										<input type="email" name="email" class="form-control" placeholder="Your Email" required>
-										<br>
-											<textarea name="message" class="form-control" placeholder="Message" row="4" required></textarea><br>
-											<input type="submit" class="form-control submit" value="SEND MESSAGE">
-											<input type="reset" value="Reset" />
-										</form>				
+						<article id="contact">
+							<h2 class="major">Contact</h2>
+							<form method="post" action="contactform.php">
+								<div class="fields">
+									<div class="field half">
+										<label for="name">Name</label>
+										<input type="text" name="name" id="name" />
 									</div>
-								<ul class="icons">
-									<li><a href="https://www.linkedin.com/in/clayton-oswald-3358a5139/" target="_blank" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
-									<li><a href="https://wusts.blogspot.com/" target="_blank" class="icon fa-pencil-square-o"><span class="label">Blogger</span></a></li>
-									<li><a href="https://github.com/OSWALD-CO" target="_blank" class="icon fa-github"><span class="label">GitHub</span></a></li>
+									<div class="field half">
+										<label for="email">Email</label>
+										<input type="text" name="email" id="email" />
+									</div>
+									<div class="field">
+										<label for="message">Message</label>
+										<textarea name="message" id="message" rows="4"></textarea>
+									</div>
+								</div>
+								<ul class="actions">
+									<li><input type="submit" value="Send Message" class="primary" /></li>
+									<li><input type="reset" value="Reset" /></li>
 								</ul>
-							</article>
+							</form>
+							<ul class="icons">
+								<li><a href="https://www.linkedin.com/in/clayton-oswald-3358a5139/" target="_blank" class="icon fa-linkedin"><span class="label">Linkedin</span></a></li>
+								<li><a href="https://wusts.blogspot.com/" target="_blank" class="icon fa-pencil-square-o"><span target="_blank" class="label">Blogger</span></a></li>
+								<li><a href="https://github.com/OSWALD-CO/" target="_blank" class="icon fa-github"><span class="label">GitHub</span></a></li>
+							</ul>
+						</article>
+
 
 
 						<!-- Elements -->
