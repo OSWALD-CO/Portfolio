@@ -1,16 +1,26 @@
 <?php
+    $name = $_POST['name'];
+    $visitor_email = $_POST['mail'];
+    $message = $_POST['message'];
 
-if (isset($_POST['submit'])) {
-    
-    $name = $_Post['name'];
-    $mailFrom = $_Post['email'];
-    $message = $_Post['message'];
 
-    $mailTo = "coswald@my365.bellevue.edu";
-    $headers = "From: ".$mailFrom;
-    $txt = "You have received an e-mail from you portfolio from ".$name.".\n\n".$message;
+    $email_from = '_mainaccount@oswaldportfolio.com';
 
-    mail($mailTo, $subject, $txt, $headers);
-    header("Location: index.php?mailsend");
+    $email_subject = "New Contact From Portfolio";
 
-}
+    $email_body = "User Name: $name\n".
+                    "User Email: $visitor_email\n".
+                    "User Message: \n\n$message";
+
+
+    $to = "clayoswald.co@gmail.com";
+
+    $headers = "From: $email_from \r\n";
+
+    $headers .= "Reply To: $visitor_email \r\n";
+
+    mail($to,$email_subject,$email_body,$headers);
+
+    header("Location: index.html");
+
+?>
